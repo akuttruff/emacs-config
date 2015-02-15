@@ -1,21 +1,16 @@
-;; These customizations change the way emacs looks and disable/enable
-;; some user interface elements. Some useful customizations are
-;; commented out, and begin with the line "CUSTOMIZE". These are more
-;; a matter of preference and may require some fiddling to match your
-;; preferences
+;;UI Customizations
 
-;; Turn off the menu bar at the top of each frame because it's distracting
+;; Turn off the menu bar 
 (menu-bar-mode -1)
 
 ;; Show line numbers
-(global-linum-mode)
+;;(global-linum-mode)
 
-;; You can uncomment this to remove the graphical toolbar at the top. After
-;; awhile, you won't need the toolbar.
-;; (when (fboundp 'tool-bar-mode)
-;;   (tool-bar-mode -1))
+;; Removes graphical toolbar
+(when (fboundp 'tool-bar-mode)   
+(tool-bar-mode -1))
 
-;; Don't show native OS scroll bars for buffers because they're redundant
+;; Don't show native OS scroll bars for buffers 
 (when (fboundp 'scroll-bar-mode)
   (scroll-bar-mode -1))
 
@@ -31,10 +26,10 @@
 ;; increase font size for better readability
 (set-face-attribute 'default nil :height 140)
 
-;; Uncomment the lines below by removing semicolons and play with the
-;; values in order to set the width (in characters wide) and height
-;; (in lines high) Emacs will have whenever you start it
-;; (setq initial-frame-alist '((top . 0) (left . 0) (width . 177) (height . 53)))
+;; opens Emacs with a fullscreen window
+(custom-set-variables
+ '(initial-frame-alist (quote ((fullscreen . maximized)))))
+
 
 ;; These settings relate to how emacs interacts with your operating system
 (setq ;; makes killing/yanking interact with the clipboard
@@ -56,7 +51,7 @@
       ;; Mouse yank commands yank at point instead of at click.
       mouse-yank-at-point t)
 
-;; No cursor blinking, it's distracting
+;; Disables blinking cursor
 (blink-cursor-mode 0)
 
 ;; full path in title bar

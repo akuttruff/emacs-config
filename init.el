@@ -131,11 +131,13 @@
 (load "setup-clojure.el")
 (load "setup-js.el")
 
+;; Binds meta key to mac os command key
 (setq mac-option-key-is-meta nil
       mac-command-key-is-meta t
       mac-command-modifier 'meta
       mac-option-modifier 'none)
 
+;; Keybindings from the most excellent Ryan Spangler
 (global-set-key (kbd "C-c e") 'fc-eval-and-replace)
 (global-set-key (kbd "C-!") 'shell-command-replace)
 (global-set-key (kbd "M-g") 'goto-line)

@@ -130,3 +130,32 @@
 ;; Langauage-specific
 (load "setup-clojure.el")
 (load "setup-js.el")
+
+(setq mac-option-key-is-meta nil
+      mac-command-key-is-meta t
+      mac-command-modifier 'meta
+      mac-option-modifier 'none)
+
+(global-set-key (kbd "C-c e") 'fc-eval-and-replace)
+(global-set-key (kbd "C-!") 'shell-command-replace)
+(global-set-key (kbd "M-g") 'goto-line)
+(global-set-key (kbd "C-c m") 'pop-global-mark)
+
+(global-set-key (kbd "C-w") 'backward-kill-word)
+(global-set-key (kbd "C-x C-k") 'kill-region)
+
+(global-set-key (kbd "M-s") 'isearch-forward-regexp)
+(global-set-key (kbd "M-r") 'isearch-backward-regexp)
+
+(global-set-key (kbd "C-z") 'cyclebuffer-forward)
+(global-set-key (kbd "M-z") 'cyclebuffer-backward)
+
+(global-set-key (kbd "C-c c") 'comment-region)
+(global-set-key (kbd "C-c u") 'uncomment-region)
+(global-set-key (kbd "C-c i") 'indent-region)
+
+(global-set-key (kbd "M-m") 'bookmark-set)
+(global-set-key (kbd "M-j") 'bookmark-jump)
+
+(global-set-key (kbd "C-,") 'other-window)
+(global-set-key (kbd "C-'") 'next-buffer)

@@ -1,5 +1,6 @@
 .smex-items
 *~$
+init.el.save
 places
 .recentf
 ido.last
